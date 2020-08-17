@@ -134,7 +134,7 @@ function checkData(data,song){
 
 function displaySong(data,song) {
     let html = '<h2 class="lyrics-title text-success mb-4">' + song.display + '</h2>';
-    html += '<div class="lyric text-white" id="thelyrics">' + data.lyrics.replace(n/g, '<br />') + '</div>';
+    html += '<div class="lyric text-white" id="thelyrics">' + data.lyrics.replace(/\n/g, '<br />') + '</div>';
    
     const parentNode = document.getElementById('single-lyric');
     parentNode.innerHTML = html;
